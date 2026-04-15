@@ -1,0 +1,3 @@
+[submodule "Library/OpenRegistry"]
+	path = Library/OpenRegistry
+	url = https://github.com/RedGreenBlue09/OpenRegistry
