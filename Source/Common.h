@@ -8,6 +8,7 @@
 #include <inttypes.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #define STATUS_SUCCESS                   ((bcd_status)0x00000000)
 #define STATUS_UNSUCCESSFUL              ((bcd_status)0xC0000001)
@@ -20,6 +21,8 @@
 #define STATUS_CANNOT_LOAD_REGISTRY_FILE ((bcd_status)0xC0000218)
 #define STATUS_NOT_FOUND                 ((bcd_status)0xC0000225)
 
+#define BCD_MIN(A, B) ((A) < (B) ? (A) : (B))
+#define BCD_MAX(A, B) ((A) > (B) ? (A) : (B))
 #define BCD_IN_RANGE(X, A, B) ((X) >= (A) && (X) <= (B))
 #define BCD_ARRAY_LENGTH(X) (sizeof(X) / sizeof(*(X)))
 

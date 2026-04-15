@@ -204,7 +204,7 @@ static inline uint16_t ToUpper16Ascii(uint16_t X) {
 }
 
 static int CompareString16Ascii(registry_string16 A, registry_string16 B) {
-	size_t CompareLength = min(A.Length, B.Length);
+	size_t CompareLength = BCD_MIN(A.Length, B.Length);
 	for (size_t i = 0; i < CompareLength; ++i) {
 		uint16_t UpperA = ToUpper16Ascii(A.aBuffer[i]);
 		uint16_t UpperB = ToUpper16Ascii(B.aBuffer[i]);

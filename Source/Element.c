@@ -127,7 +127,7 @@ uint8_t Bcd_ValidateElementValueData(
 			size_t iOffset = 0;
 			while (iOffset < nString && ss[iOffset] != '\0') {
 				uint16_t* s = &ss[iOffset];
-				size_t nSegment = wcslen(s);
+				size_t nSegment = Registry_CountString16(s);
 				bValid &= Bcd_ValidateGuidString((registry_string16){nSegment, nSegment, s});
 				iOffset += nSegment + 1;
 			}
